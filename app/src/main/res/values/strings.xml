@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mathe Barcode Reader</string>
+    <string name="barcode_value">Barcode Value:</string>
 </resources>

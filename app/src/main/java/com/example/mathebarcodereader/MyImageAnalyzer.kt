@@ -18,7 +18,7 @@ class MyImageAnalyzer(): ImageAnalysis.Analyzer {
 
     @SuppressLint("UnsafeOptInUsageError")
     override fun analyze(imageProxy: ImageProxy) {
-        tvScannedData = viewBinding.tvScannedData
+        tvScannedData = viewBinding.bottomText
         val inputImage =
             InputImage.fromMediaImage(imageProxy.image!!, imageProxy.imageInfo.rotationDegrees)
         val options = BarcodeScannerOptions.Builder()
@@ -41,7 +41,6 @@ class MyImageAnalyzer(): ImageAnalysis.Analyzer {
                             val url = barcode.url!!.url
                             tvScannedData.text = url
                         }
-
                     }
                 }
             }
